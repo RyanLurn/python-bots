@@ -1,4 +1,3 @@
-import sys
 from rich.console import Console
 from openai import OpenAI
 
@@ -12,7 +11,7 @@ messages.append({"role": "system", "content": "You are an ancient golem."})
 while True:
     user_input = console.input("[bold blue]You:[/bold blue] ")
     if user_input == "/exit":
-        sys.exit()
+        break
     messages.append({"role": "user", "content": user_input})
 
     console.print("[bold yellow]Chatbot:[/bold yellow] ", end="")
